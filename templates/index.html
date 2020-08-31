@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+	<div style="color:black">
+    <form action="{{ url_for('predict')}}" method="post">		
+	<h2>House Price Predictor</h2>
+
+		<table style="width:100%">
+		  <tr>
+			<td><h3>Number of Rooms</h3></td>
+			<td><input id="rooms" name="rooms" type="number "></td>
+		  </tr>
+		  <tr>
+			<td><h3>Distance from City Centre</h3></td>
+			<td><input id="distance" name="distance" required="required"></td>
+		  </tr>
+		</table>
+		<br><br><button id="sub" type="submit ">Calculate the Price</button>
+        </form>
+        <br><br><h3>{{ prediction_text }}<h3>
+
+    </div>
+    <style>
+        body {
+            background-color: white;
+            text-align: left;
+            padding: 0px;
+        }
+    </style>
+</body>
+
+</html>
